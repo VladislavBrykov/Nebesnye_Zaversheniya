@@ -1,0 +1,328 @@
+/*ФАСЕТЫ*/
+/*стили настроены под "ajax-фасеты с выключенным "Обновлять результаты по AJAX" и включенной галкой "Показывать ссылку для сброса"*/
+/*Чтобы правильно работала цена, нужно поставить в фасете оператор ИЛИ*/
+/*"Поведение пустого фасета" как "Показывать обёртку для ajax_facets"*/
+.bd-drupalregion-18,
+.region-facets{
+	background-color: rgba(128, 128, 128, .2);
+}
+.block-facetapi .bd-blockheader,
+.block-facetapi .block-title,
+.block-facetapi .content,
+.cf-block{
+	padding: 10px;
+	user-select: none;
+}
+.block-facetapi.block div.bd-blockheader,
+.block-facetapi.block div.block-title{
+	display: flex;
+	align-items: center;
+	min-height: 45px;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: inherit !important;
+	line-height: 1.25;
+	transition: .15s;
+	margin-bottom: 0;
+	text-align: left;
+	text-transform: inherit;
+}
+.block-facetapi .bd-blockheader ~ .content,
+.block-facetapi .block-title ~ .content{
+	display: none;
+}
+.block-facetapi.opened .bd-blockheader,
+.block-facetapi.opened .block-title{
+	background-color: rgba(0,0,0,0.1);
+}
+.block-facetapi .bd-blockheader:hover,
+.block-facetapi .block-title:hover{
+	background-color: rgba(0,0,0,0.2);
+}
+.ajax-facets-controls-wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -10px;
+}
+.ajax-facets-controls-wrapper>*{
+	flex-grow: 1;
+	width: 40%;
+	margin-right: 10px;
+}
+.ajax-facets-controls-wrapper .slider-wrapper{
+	width: 100%;
+	height: 4px;
+	border: none;
+	display: flex;
+	align-items: center;
+	background-color: #fff;
+	border: 0px solid transparent;
+	border-width: 0 8px;
+	background-clip: content-box;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+.ajax-facets-controls-wrapper .ui-widget-header{
+	background: rgba(0, 0, 0, .35);
+	cursor: pointer;
+}
+.ajax-facets-controls-wrapper .slider-wrapper .ui-slider-handle{
+	top: unset;
+	border: 3px solid rgba(0, 0, 0, .35);
+	background-image: none;
+	background-color: #fff;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	margin-left: -8px;
+	left: -1px;
+	transition-property: background-color;
+	cursor: pointer;
+}
+.ajax-facets-controls-wrapper .slider-wrapper .ui-slider-handle:hover,
+.ajax-facets-controls-wrapper .slider-wrapper .ui-slider-handle.ui-state-hover,
+.ajax-facets-controls-wrapper .slider-wrapper .ui-slider-handle.ui-state-focus,
+.ajax-facets-controls-wrapper .slider-wrapper .ui-slider-handle.ui-state-active{
+	border-color: rgba(0, 0, 0, .5)
+}
+.ajax-facets-controls-wrapper .min-input label,
+.ajax-facets-controls-wrapper .max-input label{
+	/*display: none;*/
+	text-transform: lowercase;
+	font-weight: 600;
+	line-height: 1;
+	font-size: 15px;
+	margin-bottom: 3px;
+}
+.ajax-facets-controls-wrapper .min-input input,
+.ajax-facets-controls-wrapper .max-input input{
+	border: none;
+	color: #000;
+	width: 100%;
+    height: 36px;
+    line-height: 1;
+    padding: 6px 12px;
+}
+.facet-multiselect-checkbox[type="checkbox"],
+.facet-custom-cb{
+	width: 16px;
+	height: 16px;
+	border-radius: 1px;
+	margin-right: 5px;
+}
+.facet-multiselect-checkbox[type="checkbox"]{
+	opacity: 0;
+	cursor: pointer;
+	position: absolute;
+}
+.facet-custom-cb{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+	color: transparent;
+	border: 2px solid #000;
+	color: transparent;
+	vertical-align: text-bottom;
+	margin-bottom: 1px;
+}
+.facet-custom-cb:before{
+	content: "\f00c";
+	display: flex;
+	font-size: 10px;
+}
+.facet-multiselect-checkbox:checked + .facet-custom-cb{
+	background-color: #828282;
+	border-color: #828282;
+	color: #fff;
+}
+.facetapi-facetapi-ajax-checkboxes label.option{
+	text-indent: 27px;
+	width: 100%;
+	cursor: pointer;
+}
+.facetapi-facetapi-ajax-checkboxes .form-type-checkbox>label{
+	position: relative;
+	cursor: pointer;
+}
+.cf-block{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	gap: 10px;
+	padding-top: 0;
+	transition: .15s;
+}
+.block-facetapi:hover+.cf-block,
+.block-facetapi.opened+.cf-block{
+	padding-top: 10px;
+}
+.cf-block .btn{
+	margin-bottom: 0;
+	margin-right: 0;
+	flex-grow: 1;
+	cursor: pointer;
+	user-select: none;
+	min-width: 100px;
+	max-width: initial;
+}
+.facet-custom-accept{
+	opacity: .5;
+	pointer-events: none;
+}
+.cf-block.active .facet-custom-accept{
+	opacity: 1;
+	pointer-events: all;
+}
+.block-facetapi .reset-link{
+	display: none !important;
+}
+.block-facetapi p{
+	margin-bottom: 0;
+	display: flex;
+	flex-direction: column;
+}
+.block-facetapi .minmax_lbl{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	padding-top: 5px;
+	
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 16px;
+}
+.block-facetapi .max-input .minmax_lbl{
+	justify-content: flex-end;
+}
+.block-facetapi .bd-blockheader:after,
+.block-facetapi .block-title:after{
+	content: "\f078";
+	margin-left: auto;
+	transform: rotate(90deg);
+	transition: .15s;
+}
+.block-facetapi.opened .bd-blockheader:after,
+.block-facetapi.opened .block-title:after{
+	transform: rotate(0deg);
+}
+.block-facetapi.block .bd-blockheader h4{
+	margin: 0;
+	font-weight: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+.block-facetapi .facetapi-facetapi-ajax-checkboxes{
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	padding: 0!important;
+	margin-bottom: 0;
+}
+.block-facetapi .facetapi-facetapi-ajax-checkboxes ul{
+	padding-left: 10px;
+    list-style: none;
+}
+.block-facetapi .facetapi-facetapi-ajax-checkboxes>li{
+	margin-top: 4px;
+	margin-bottom: 5px;
+}
+.block-facetapi:first-child{
+	margin-top: 0px;
+}
+.block-facetapi:last-child{
+	margin-bottom: 0px;
+}
+
+.block-facets-empty,
+.facets-wrapper.wrapper-facets-empty{
+	display: none;
+}
+.region-facets-head{
+	display: none;
+}
+@media (max-width: 767px){
+	.facets-wrapper{
+		position: fixed;
+		top: 0; bottom: 0;
+		left: 0; right: 0;
+		display: flex;
+		flex-direction: column;
+		z-index: 1000;
+		pointer-events: none;
+		transition: .5s;
+	}
+	.facets-wrapper>*{
+		pointer-events: all;
+	}
+	.facets-wrapper.active{
+		background-color: #fff;
+	}
+	.show-facets-button{
+		position: fixed;
+		bottom: 20px;
+		left: 20px;
+		min-width: 40px;
+		min-height: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(128, 128, 128, .2);
+		border-radius: 20px;
+		z-index: 5;
+		transition: .5s;
+	}
+	.show-facets-button:before{
+		content: '\f0b0';
+	}
+	.facets-wrapper.active .show-facets-button{
+		opacity: 0;
+		pointer-events: none;
+	}
+	.facets-wrapper .region-facets{
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 0;
+		pointer-events: none;
+		opacity: 0;
+		transition: .5s;
+		overflow: auto;
+		height: 100%;
+	}
+	.facets-wrapper.active .region-facets{
+		pointer-events: all;
+		opacity: 1;
+	}
+	.region-facets-head{
+		position: sticky;
+		top: 0;
+		z-index: 1;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 15px;
+		background-color: #fff;
+	}
+	.region-facets-header{
+		padding: 10px;
+	}
+	.close-region-facets{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-self: flex-start;
+		min-width: 45px;
+		min-height: 45px;
+		padding: 10px;
+	}
+	.close-region-facets:before{
+		content: '\f00d';
+		line-height: 1;
+	}
+	.cf-block{
+		position: sticky !important;
+		bottom: 0;
+		margin-top: auto;
+	}
+}

@@ -1,0 +1,74 @@
+/*Вопрос-ответ*/
+.node-faq.node-teaser{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+}
+.node-faq.node-teaser>.field,
+.node-faq.node-teaser .group-container{
+	background-color: rgba(230, 230, 230, 0.95);
+}
+.node-faq.node-teaser .field-name-title .title-field{
+	padding: 15px;
+	border-radius: .25rem;
+	margin: 5px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0;
+	line-height: 1;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .15s;
+}
+.node-faq.node-teaser .field-name-title .title-field:after{
+	content:"\f078";
+	font-size: 16px;
+	transform: rotate(90deg);
+	transition: .2s;
+}
+.node-faq.node-teaser .field-name-title:hover .title-field{
+	background-color: rgba(0,0,0,0.2);
+}
+.node-faq.node-teaser.active .field-name-title .title-field:after{
+	transform: rotate(0deg);
+}
+.node-faq.node-teaser .group-content{
+	display: none;
+}
+.node-faq.node-teaser .group-content:before{
+	content: '';
+	font-size: 0;
+	margin-left: 40px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 15px solid rgba(230, 230, 230, 0.95);
+	display: block;
+	width: min-content;
+}
+.node-faq.node-teaser .group-container{
+	padding: 15px;
+	border-radius: .25rem;
+}
+
+.view-faq.view-id-faq .views-exposed-widget{
+	float: none;
+	display: inline-block;
+	padding-top: 0;
+}
+.view-faq.view-id-faq .views-exposed-widget .form-submit{
+	margin-top: 0;
+}
+.view-faq.view-id-faq .views-exposed-widget label{
+	font-weight: bold;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 5px 7px 5px 0;
+}
+.view-faq.view-id-faq .views-exposed-widget .views-widget{
+	display: inline-block;
+	vertical-align: middle;
+}
+.view-faq.view-id-faq .form-text{
+	margin-top: 0;
+}
